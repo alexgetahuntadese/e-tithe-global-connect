@@ -1,7 +1,7 @@
-
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Video } from "lucide-react";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -21,7 +21,7 @@ const Index = () => {
           </div>
         </div>
 
-        <div className="max-w-md mx-auto">
+        <div className="max-w-md mx-auto space-y-4">
           <Card className="bg-white/10 backdrop-blur-md border-white/20 hover:bg-white/20 transition-all duration-300 shadow-2xl hover:shadow-purple-500/20 opacity-0 animate-fade-in [animation-delay:0.6s]">
             <CardHeader>
               <CardTitle className="text-white text-2xl">Explore Subjects</CardTitle>
@@ -38,9 +38,29 @@ const Index = () => {
               </Button>
             </CardContent>
           </Card>
+
+          <Card className="bg-white/10 backdrop-blur-md border-white/20 hover:bg-white/20 transition-all duration-300 shadow-2xl hover:shadow-blue-500/20 opacity-0 animate-fade-in [animation-delay:0.8s]">
+            <CardHeader>
+              <CardTitle className="text-white text-2xl flex items-center gap-2">
+                <Video className="h-6 w-6" />
+                Video Consultation
+              </CardTitle>
+              <CardDescription className="text-blue-100">
+                Connect with teachers and tutors via video call
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <Button 
+                onClick={() => navigate('/video-call')}
+                className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-semibold py-3 shadow-lg transform hover:scale-105 transition-all duration-200"
+              >
+                Start Video Call
+              </Button>
+            </CardContent>
+          </Card>
         </div>
 
-        <div className="mt-12 text-center opacity-0 animate-fade-in [animation-delay:0.8s]">
+        <div className="mt-12 text-center opacity-0 animate-fade-in [animation-delay:1s]">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-white/80">
             <div>
               <div className="text-2xl font-bold text-green-400">2050+</div>
